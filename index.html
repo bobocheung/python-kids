@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小學生學 Python</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>小學生學 Python</h1>
+            <p>循序漸進 20 關，從零開始學 Python！</p>
+        </header>
+        <section class="lesson">
+            <h2>題目標題</h2>
+            <p>題目說明</p>
+            <pre class="example">提示</pre>
+        </section>
+        <section class="editor-area">
+            <textarea id="python-code" rows="7"></textarea>
+            <button id="run-btn">執行程式</button>
+        </section>
+        <!-- 關卡導航與指示會由 JS 動態插入 -->
+        <section class="output-area">
+            <h3>執行結果：</h3>
+            <pre id="output"></pre>
+        </section>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html> 

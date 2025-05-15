@@ -1,0 +1,193 @@
+body {
+    background: linear-gradient(120deg, #f8ffae 0%, #43c6ac 100%);
+    font-family: 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+.container {
+    max-width: 600px;
+    margin: 48px auto 32px auto;
+    background: #fff;
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(60,60,60,0.10), 0 1.5px 6px rgba(67,198,172,0.08);
+    padding: 40px 32px 32px 32px;
+    transition: box-shadow 0.3s;
+}
+.container:hover {
+    box-shadow: 0 12px 40px rgba(60,60,60,0.16), 0 2px 8px rgba(67,198,172,0.10);
+}
+
+header h1 {
+    color: #222;
+    font-size: 2.3rem;
+    margin-bottom: 0.2em;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+header p {
+    color: #888;
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+}
+
+.lesson h2 {
+    color: #0071e3;
+    font-size: 1.25rem;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.lesson p {
+    color: #333;
+    margin-bottom: 0.5em;
+    font-size: 1.08em;
+}
+.example {
+    background: #f5faff;
+    border-left: 5px solid #0071e3;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 1.08em;
+    margin-bottom: 1em;
+    color: #0071e3;
+    font-family: 'Menlo', 'Consolas', 'monospace';
+}
+
+.editor-area {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 1.5em;
+}
+#python-code {
+    width: 100%;
+    min-height: 90px;
+    font-size: 1.1em;
+    border-radius: 12px;
+    border: 1.5px solid #e0e0e0;
+    padding: 12px;
+    background: #f8fafd;
+    margin-bottom: 12px;
+    resize: vertical;
+    font-family: 'Menlo', 'Consolas', 'monospace';
+    transition: border 0.2s;
+}
+#python-code:focus {
+    border: 1.5px solid #0071e3;
+    outline: none;
+}
+#run-btn {
+    background: linear-gradient(90deg, #0071e3 0%, #43c6ac 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(67,198,172,0.08);
+}
+#run-btn:hover {
+    background: linear-gradient(90deg, #43c6ac 0%, #0071e3 100%);
+    box-shadow: 0 4px 16px rgba(67,198,172,0.12);
+}
+
+.level-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 18px 0 0 0;
+}
+.nav-btn {
+    background: #f5faff;
+    color: #0071e3;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(67,198,172,0.06);
+}
+.nav-btn:disabled {
+    background: #e0e0e0;
+    color: #aaa;
+    cursor: not-allowed;
+}
+.nav-btn.highlight {
+    background: #43c6ac;
+    color: #fff;
+    animation: btn-pop 0.5s;
+}
+@keyframes btn-pop {
+    0% { transform: scale(1); }
+    60% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+#level-indicator {
+    color: #0071e3;
+    font-weight: 600;
+    font-size: 1.08em;
+    letter-spacing: 1px;
+}
+
+.output-area {
+    background: #f8fafd;
+    border-radius: 12px;
+    padding: 18px;
+    min-height: 60px;
+    box-shadow: 0 2px 8px rgba(67,198,172,0.08);
+    margin-top: 10px;
+}
+.output-area h3 {
+    margin-top: 0;
+    color: #0071e3;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+#output {
+    color: #222;
+    font-size: 1.1em;
+    margin: 0;
+    white-space: pre-wrap;
+    font-family: 'Menlo', 'Consolas', 'monospace';
+}
+.success {
+    color: #43c6ac;
+    font-weight: bold;
+    font-size: 1.1em;
+    animation: fadeIn 0.7s;
+}
+.fail {
+    color: #e53935;
+    font-weight: bold;
+    font-size: 1.1em;
+    animation: fadeIn 0.7s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 700px) {
+    .container {
+        max-width: 98vw;
+        padding: 10px 2vw;
+    }
+    header h1 {
+        font-size: 1.3rem;
+    }
+    .lesson h2 {
+        font-size: 1.1rem;
+    }
+    .output-area {
+        padding: 10px;
+    }
+} 
