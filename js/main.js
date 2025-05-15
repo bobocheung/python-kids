@@ -147,8 +147,8 @@ let currentLevel = 0;
 function setLevel(idx) {
   const level = levels[idx];
   document.querySelector('.lesson h2').textContent = level.title;
-  document.querySelector('.lesson p').textContent = level.description;
-  document.querySelector('.example').textContent = level.hint;
+  document.querySelector('.lesson .desc').textContent = level.description;
+  document.querySelector('.lesson .example').textContent = level.hint;
   document.getElementById('python-code').value = level.starter;
   document.getElementById('output').textContent = '';
   document.getElementById('level-indicator').textContent = `第 ${idx+1} 關 / 共 20 關`;
@@ -209,22 +209,7 @@ function showFail() {
   output.innerHTML += '\n<span class="fail">答案還沒完全正確，再試一次！</span>';
 }
 
-document.getElementById('run-btn').addEventListener('click', runCode);
-document.getElementById('prev-btn').addEventListener('click', ()=>{
-  if(currentLevel>0) {
-    currentLevel--;
-    setLevel(currentLevel);
-  }
-});
-document.getElementById('next-btn').addEventListener('click', ()=>{
-  if(currentLevel<levels.length-1) {
-    currentLevel++;
-    setLevel(currentLevel);
-  }
-});
-
-// 初始化
-window.onload = ()=>{
+document.addEventListener('DOMContentLoaded', function() {
   // 新增 Apple-style 關卡指示與按鈕
   const editor = document.querySelector('.editor-area');
   const nav = document.createElement('div');
@@ -235,5 +220,21 @@ window.onload = ()=>{
     <button id="next-btn" class="nav-btn">下一關</button>
   `;
   editor.parentNode.insertBefore(nav, editor.nextSibling);
+
+  // 綁定事件（必須在插入按鈕後）
+  document.getElementById('run-btn').addEventListener('click', runCode);
+  document.getElementById('prev-btn').addEventListener('click', ()=>{
+    if(currentLevel>0) {
+      currentLevel--;
+      setLevel(currentLevel);
+    }
+  });
+  document.getElementById('next-btn').addEventListener('click', ()=>{
+    if(currentLevel<levels.length-1) {
+      currentLevel++;
+      setLevel(currentLevel);
+    }
+  });
+
   setLevel(0);
-}; 
+}); 
