@@ -176,6 +176,25 @@ header p {
     to { opacity: 1; transform: translateY(0); }
 }
 
+.hint-area button {
+    background: linear-gradient(90deg, #0071e3 0%, #43c6ac 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 18px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 8px;
+    margin-right: 10px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(67,198,172,0.08);
+}
+.hint-area button:hover {
+    background: linear-gradient(90deg, #43c6ac 0%, #0071e3 100%);
+    box-shadow: 0 2px 8px rgba(67,198,172,0.12);
+}
+
 @media (max-width: 700px) {
     .container {
         max-width: 98vw;
