@@ -4,14 +4,14 @@ const levels = [
     title: '1. 用 print() 印出 Hello, world!',
     description: '請用 print() 印出 Hello, world!。',
     answer: 'print("Hello, world!")',
-    starter: 'print("Hello, world!")',
+    starter: 'print("")',
     hint: 'print() 可以把你想說的話顯示在螢幕上。'
   },
   {
     title: '2. 用 print() 印出你的名字',
     description: '請用 print() 印出你的名字。',
     answer: 'print("Cheung Kap Lam")',
-    starter: 'print("你的名字")',
+    starter: 'print("")',
     hint: '把 "你的名字" 換成你自己的名字。'
   },
   {
@@ -25,21 +25,21 @@ const levels = [
     title: '4. 宣告一個變數 name，值為 "Amy"，然後印出 name',
     description: '請宣告變數 name，值為 "Amy"，然後印出 name。',
     answer: 'name = "Amy"\nprint(name)',
-    starter: 'name = "Amy"\nprint(name)',
+    starter: 'name = ""\nprint(name)',
     hint: '先宣告變數，再用 print() 印出。'
   },
   {
     title: '5. 宣告變數 a=5, b=7，印出 a+b',
     description: '請宣告 a=5, b=7，然後印出 a+b。',
     answer: 'a = 5\nb = 7\nprint(a + b)',
-    starter: 'a = 5\nb = 7\nprint(a + b)',
+    starter: 'a = 0\nb = 0\nprint(a + b)',
     hint: '變數可以直接相加。'
   },
   {
     title: '6. 用 if 判斷 10 是否大於 5，若是則印出 "Yes"',
     description: '請用 if 判斷 10 是否大於 5，若是則印出 "Yes"。',
     answer: 'if 10 > 5:\n    print("Yes")',
-    starter: 'if 10 > 5:\n    print("Yes")',
+    starter: 'if 10 > 5:\n    print("")',
     hint: 'if 條件後面要加冒號，縮排很重要。'
   },
   {
@@ -53,14 +53,14 @@ const levels = [
     title: '8. 宣告一個 list 包含 2, 4, 6，印出這個 list',
     description: '請宣告一個 list 包含 2, 4, 6，然後印出這個 list。',
     answer: 'numbers = [2, 4, 6]\nprint(numbers)',
-    starter: 'numbers = [2, 4, 6]\nprint(numbers)',
+    starter: 'numbers = []\nprint(numbers)',
     hint: 'list 用中括號。'
   },
   {
     title: '9. 印出 list [1,2,3] 的第二個元素',
     description: '請印出 list [1,2,3] 的第二個元素。',
     answer: 'nums = [1, 2, 3]\nprint(nums[1])',
-    starter: 'nums = [1, 2, 3]\nprint(nums[1])',
+    starter: 'nums = [1, 2, 3]\nprint(nums[ ])',
     hint: 'Python 的索引從 0 開始。'
   },
   {
@@ -74,14 +74,14 @@ const levels = [
     title: '11. 宣告 function greet()，印出 "Hi!"',
     description: '請宣告 function greet()，然後印出 "Hi!"。',
     answer: 'def greet():\n    print("Hi!")\ngreet()',
-    starter: 'def greet():\n    print("Hi!")\ngreet()',
+    starter: 'def greet():\n    print("")',
     hint: '定義 function 用 def。'
   },
   {
     title: '12. 宣告 function add(a, b)，回傳 a+b，然後印出 add(3, 4)',
     description: '請宣告 function add(a, b)，回傳 a+b，然後印出 add(3, 4)。',
     answer: 'def add(a, b):\n    return a + b\nprint(add(3, 4))',
-    starter: 'def add(a, b):\n    return a + b\nprint(add(3, 4))',
+    starter: 'def add(a, b):\n    return a + b\nprint(add( , ))',
     hint: 'return 會回傳值。'
   },
   {
@@ -95,14 +95,14 @@ const levels = [
     title: '14. 用 if-else 判斷 x=7 是否大於 10，印出 "大" 或 "小"',
     description: '請用 if-else 判斷 x=7 是否大於 10，印出 "大" 或 "小"。',
     answer: 'x = 7\nif x > 10:\n    print("大")\nelse:\n    print("小")',
-    starter: 'x = 7\nif x > 10:\n    print("大")\nelse:\n    print("小")',
+    starter: 'x = 7\nif x > 10:\n    print("")',
     hint: 'if-else 要注意縮排。'
   },
   {
     title: '15. 宣告 dict {"name":"Amy", "age":10}，印出 name',
     description: '請宣告 dict {"name":"Amy", "age":10}，然後印出 name。',
     answer: 'info = {"name": "Amy", "age": 10}\nprint(info["name"])',
-    starter: 'info = {"name": "Amy", "age": 10}\nprint(info["name"])',
+    starter: 'info = {"name": "", "age": 0}\nprint(info[""])',
     hint: 'dict 用大括號，取值用中括號。'
   },
   {
@@ -123,14 +123,14 @@ const levels = [
     title: '18. 宣告一個 list，印出長度',
     description: '請宣告一個 list，然後印出長度。',
     answer: 'nums = [1, 2, 3, 4]\nprint(len(nums))',
-    starter: 'nums = [1, 2, 3, 4]\nprint(len(nums))',
+    starter: 'nums = []\nprint(len(nums))',
     hint: 'len(list) 會得到長度。'
   },
   {
     title: '19. 宣告 function square(x)，回傳 x 的平方，印出 square(5)',
     description: '請宣告 function square(x)，回傳 x 的平方，然後印出 square(5)。',
     answer: 'def square(x):\n    return x * x\nprint(square(5))',
-    starter: 'def square(x):\n    return x * x\nprint(square(5))',
+    starter: 'def square(x):\n    return x * x\nprint(square())',
     hint: 'x * x 是平方。'
   },
   {
@@ -154,6 +154,8 @@ function setLevel(idx) {
   document.getElementById('level-indicator').textContent = `第 ${idx+1} 關 / 共 20 關`;
   document.getElementById('prev-btn').disabled = idx === 0;
   document.getElementById('next-btn').disabled = idx === levels.length-1;
+  // 預設隱藏提示
+  document.querySelector('.lesson .example').style.display = 'none';
 }
 
 function outf(text) {
@@ -235,6 +237,10 @@ document.addEventListener('DOMContentLoaded', function() {
       setLevel(currentLevel);
     }
   });
-
+  // 綁定顯示提示按鈕
+  document.getElementById('show-hint-btn').addEventListener('click', function() {
+    document.querySelector('.lesson .example').style.display = 'block';
+    this.style.display = 'none';
+  });
   setLevel(0);
 }); 
